@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
 """
-Created on Wed Aug 26 10:00:37 2020
+Created on Wed Aug 26 10:00:37 2020.
 
 @author: Antonio
 """
@@ -23,10 +22,10 @@ if tipo de silla es 'l'{
 Regreso el precio calculado;"
 """
 
+
 def calcula_precio_antes_descuento(cantidad, tipo):
-    """
-    Método que calcula el precio de venta antes de aplicar cualquier
-    descuento, basándose en la cantidad de sillas y de que tipo es    
+    """Método que calcula el precio de venta antes de aplicar cualquier.
+    descuento, basándose en la cantidad de sillas y de que tipo es.
 
     Parameters
     ----------
@@ -45,18 +44,19 @@ def calcula_precio_antes_descuento(cantidad, tipo):
     basica = 700
     estandar = 900
     lujo = 1500
-    
+
     if tipo == 'B':
         precio = basica * cantidad
     if tipo == 'E':
         precio = estandar * cantidad
     if tipo == 'L':
         precio = lujo * cantidad
-    
+
     return precio
 
+
 """
-Método Calcula_precio_despues_descuento; // recibo el precio a calcular el descuento y el tipo de cliente
+Método Calcula_precio_despues_descuento;
 if cliente es 'N'{
   if precio >= 10000 y precio < 20000{
     tasa es igual a 10%
@@ -74,10 +74,10 @@ if cliente es iaugal a 'F'{
 El descuento es el precio por la tasa;
 Regreso el descuento calculado;
 """
-    
-def calcula_precio_despues_descuento(precio,cliente):
-    """
-    Método que caldula dependiendo del monito a vender y el tipo de cliente
+
+
+def calcula_precio_despues_descuento(precio, cliente):
+    """Método que caldula dependiendo del monito a vender y el tipo de cliente.
     el monto del descuento que se aplicará  en la venta
 
     Parameters
@@ -93,19 +93,19 @@ def calcula_precio_despues_descuento(precio,cliente):
         el descuento calulaod por precio y tipo de clietne.
 
     """
-    
-    if cliente =='N':
-        if precio  >= 10000 and precio < 20000 :
+
+    if cliente == 'N':
+        if precio >= 10000 and precio < 20000:
             tasa = .1
         if precio > 20000:
             tasa = .15
         if precio < 10000:
-            tasa= 0 
-    if cliente == "F" :
+            tasa = 0
+    if cliente == "F":
         tasa = .2
-        
-    descuento = precio*tasa    
-    
+
+    descuento = precio*tasa
+
     return descuento
 
 """
@@ -121,19 +121,19 @@ Imprimo el precio final;
 Fin;
 """
 
+
 def main():
     tipo_silla = input()
     tipo_cliente = input()
-    cantidad =int(input())
+    cantidad = int(input())
 
-    pad = calcula_precio_antes_descuento(cantidad, tipo_silla)   
-    descuento = calcula_precio_despues_descuento(pad,tipo_cliente)
+    pad = calcula_precio_antes_descuento(cantidad, tipo_silla)
+    descuento = calcula_precio_despues_descuento(pad, tipo_cliente)
     preciofinal = pad-descuento
-    
+
     print(pad)
     print(descuento)
     print(preciofinal)
-    
-    
-main()    
-    
+
+
+main()
